@@ -1,0 +1,133 @@
+@import 'variables';
+@font-face {
+  font-family: roboto-bold;
+  src: url('assets\\fonts\\Roboto-Bold.ttf')  format('truetype');
+}
+@font-face {
+  font-family: roboto-bold;
+  src: url('assets\\fonts\\Roboto-Regular.ttf')  format('truetype');
+}
+
+body{
+  position: relative;
+  background-color: hsl(234, 29%, 20%);
+}
+
+.container{
+  position: absolute;
+  top: 100px;
+  left: 25%;
+  display: flex;
+  height: 500px;
+  width: 50%;
+  font-family:'Roboto', sans-serif;
+  background-color: white;
+  border-radius: 1em;
+  padding: 15px 15px 15px 15px;
+}
+
+.left-side-content{
+  padding-right: 30px;
+  padding-left: 20px;
+  padding-bottom: 60px;
+  padding-top: 30px;
+  h1 {
+    font-size: 45px;
+  }
+  ul{
+    margin-bottom: 15px;
+    // list-style-type: circle;
+    list-style-image: url('assets\\images\\icon-list.svg');
+  }
+  .join .label{
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .join{
+    opacity: 0.6;
+  }
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  *{
+    height: 50px;
+    border-radius: 0.5em;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  button{
+    margin-top: 10px;
+    color: white;
+    background-color: hsl(235, 18%, 26%);
+    transition: 0.4s;
+    
+  }
+}
+#subscribe:hover{ 
+  transform: translateY(5px);
+  border: none;
+  background: $gradient;
+  box-shadow: 5px 5px 10px rosybrown;
+  }
+  
+.error{
+  // background-color: aqua;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.success-state{
+  background-color: white;
+  position: absolute;
+  top: 120px;
+  left: 35%;
+  width: 22%;
+  border-radius: 1em;
+  font-family: 'Roboto', sans-serif;
+  padding: {
+    left: 50px;
+    right: 50px;
+    bottom: 35px;
+    top: 20px;
+  }
+  h1 {
+    font-size: 30px;
+    font-weight: bold;
+  }
+  #dismiss{
+    margin-top: 10px;
+    color: white;
+    background-color: hsl(235, 18%, 26%);
+    transition: 0.4s;   
+    height: 50px;
+    width: 100%;
+    border-radius: 0.5em;
+    &:hover {
+      cursor: pointer; 
+      transform: translateY(5px);
+      border: none;
+      background: $gradient;
+      box-shadow: 5px 5px 10px rosybrown;
+    }
+  }
+}
+
+
+
+
+.hidden{
+  display: none;
+}
+
+@keyframes shake {
+  0% { margin-left: 0rem; margin-right: 0rem;}
+  25% { margin-left: 1rem; margin-right: -1rem; }
+  75% { margin-left: -1rem; margin-right: 1rem; }
+  100% { margin-left: 0rem; margin-right: 0rem; }
+}
